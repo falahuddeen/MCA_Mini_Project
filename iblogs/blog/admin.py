@@ -16,6 +16,8 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('title',)
     list_per_page = 50
 
+    class Media:
+        js=('https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js','js/script.js',)
 
 # Adding the Post and Category to The Admin Panel
 admin.site.register(Category,CategoryAdmin)

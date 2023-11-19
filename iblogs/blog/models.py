@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.html import format_html
-from tinymce.models import HTMLField
 
 
 # https://pypi.org/project/django-tinymce/
@@ -36,10 +35,12 @@ class Category(models.Model):
 class Post(models.Model):
     post_id=models.AutoField(primary_key=True)
     title=models.CharField(max_length=200)
-    content=HTMLField()
+    content=models.TextField()
     url=models.CharField(max_length=100)
     cat=models.ForeignKey(Category,on_delete=models.CASCADE)
     image=models.ImageField(max_length=50)
+
+
 
     def __str__(self):
         return self.title

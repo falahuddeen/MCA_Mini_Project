@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
-    'tinymce'
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +58,7 @@ ROOT_URLCONF = 'iblogs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,3 +144,31 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MATERIAL_ADMIN_SITE = {
+    'HEADER':  'BlogMingle Admin Login',  # Admin site header
+    'TITLE':  'BlogMingle',  # Admin site title
+
+
+    # 'FAVICON':  'path/to/favicon',  # Admin site favicon (path to static should be specified)
+
+    # 'MAIN_BG_COLOR':  '#000',  # Admin site main color, css color should be specified
+
+    # 'MAIN_HOVER_COLOR':  'color',  # Admin site main hover color, css color should be specified
+    # 'PROFILE_PICTURE':  'path/to/image',  # Admin site profile picture (path to static should be specified)
+    # 'PROFILE_BG':  'path/to/image',  # Admin site profile background (path to static should be specified)
+    # 'LOGIN_LOGO':  'path/to/image',  # Admin site logo on login page (path to static should be specified)
+    # 'LOGOUT_BG':  'path/to/image',  # Admin site background on login/logout pages (path to static should be specified)
+    # 'SHOW_THEMES':  True,  #  Show default admin themes button
+    # 'TRAY_REVERSE': True,  # Hide object-tools and additional-submit-line by default
+    # 'NAVBAR_REVERSE': True,  # Hide side navbar by default
+    # 'SHOW_COUNTS': True, # Show instances counts for each model
+    # 'APP_ICONS': {  # Set icons for applications(lowercase), including 3rd party apps, {'application_name': 'material_icon_name', ...}
+    #     'sites': 'send',
+    # },
+    # 'MODEL_ICONS': {  # Set icons for models(lowercase), including 3rd party models, {'model_name': 'material_icon_name', ...}
+    #     'site': 'contact_mail',
+    # }
+
+
+}
