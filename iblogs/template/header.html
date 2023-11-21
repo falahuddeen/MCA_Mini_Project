@@ -1,9 +1,12 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
+
+    {% for cat in cats %}
+
+    <li><a href="/category/{{ cat.url }}">{{ cat.title }}</a></li>
+
+    {% endfor %}
+
 </ul>
 <nav class="bg-primary">
   <div class="container">
