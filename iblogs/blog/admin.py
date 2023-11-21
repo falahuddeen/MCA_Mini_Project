@@ -12,7 +12,7 @@ class CategoryAdmin(admin.ModelAdmin):
 #Configuration of post admin
 class PostAdmin(admin.ModelAdmin):
     list_filter = ['title',]
-    list_display = ('title','content','cat')
+    list_display = ('title','cat',)
     search_fields = ('title',)
     list_per_page = 50
 

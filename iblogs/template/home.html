@@ -4,6 +4,33 @@
 
 {% block content %}
 
+
+    <div class="container-custom">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel">
+            {% for cat in cats %}
+            
+                <div class="card item" style="margin-left: 10px;">
+                <div class="img-container">
+                    <img src="/media/{{ cat.image }}" class="responsive-img" style="width: 250px;height: 250px;margin-left: 100px">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        {{ cat.title}}
+                    </div>
+                    <p class="truncate">{{ cat.description }}</p>
+                    <div class="container center-align mt20" >
+                    <a class="btn bg-primary" href=""> VIEW</a>
+                </div>
+                </div>
+
+                </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -14,7 +41,7 @@
                      <div class="col s12 m8">
                             {{ p.content |truncatewords:60| safe}}
                             <div class="mt20">
-                                <a href="" class="btn bg-primary">Read More..</a>
+                                <a href="/blog/{{ p.url }}" class="btn bg-primary">Read More..</a>
                             </div>
                      </div>
                      
