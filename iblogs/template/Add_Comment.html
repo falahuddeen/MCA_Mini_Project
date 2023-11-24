@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title%} POST {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+<centere>
+        <h1><b>Add A Comment</b></h1>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+					<th>
+                        <font size="10px"> Your Name :</font>
+					</th>
+					<td>
+						<input type="text" name="com_name" required="">
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+				<tr>
+					<th>
+                        <font size="10px"> Comment :</font>
+					</th>
+					<td>
+                        <textarea name="com_body" required="" rows="1500" cols="100"></textarea>
+					</td>
+				</tr>
+                <tr>
+                <td>
+            &nbsp
+                </td>
+            </tr>
+			</table><br>
+			<input type="submit" style="margin-left:500px;padding:20px;color: #FFFFFF;size:15px;" name="com_submit" class="bg-primary" value="Comment">
+            <br><br>
+            <br><br>
+            <br>
+
+		</form>
+	</centere>
+    </div>
+    {% if okk %}
+        <script>
+            alert("{{ okk }}")
+        </script>
+        {% endif %}
+
+{% endblock %}

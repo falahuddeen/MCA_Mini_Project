@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from blog.models import Post,Category
+from datetime import date
+from django.utils import timezone
+from blog.models import Post,Category,Comment
 
 # Create your views here.
 def home(request):
@@ -29,3 +31,19 @@ def category(request,url):
 
 def about(request):
     return render(request,'about.html',{})
+
+
+# def Add_Comment(request,id):
+#     post = Post.objects.get(id=id)
+#     com=Comment.objects.all()
+#     return render(request,'Add_Comment.html',{'post':post,'com':com})
+
+def add_comment(request,url):
+    if request.method == "POST":
+        ob = Comment()
+        ob.post = Post.objects.get(url=url)
+        ob.commenter_name = request.POST.get('com_name')
+        ob.commenter_body = request.POST.get('com_body')
+        ob.date_added=date.today()
+        ob.save()
+    return render(request,"Add_Comment.html")

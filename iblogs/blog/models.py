@@ -51,3 +51,19 @@ class Post(models.Model):
     class Meta:
         managed=False
         db_table='post'
+
+
+class Comment(models.Model):
+    com_id=models.AutoField(primary_key=True)
+    post=models.ForeignKey(Post,on_delete=models.CASCADE)
+    commenter_name=models.CharField(max_length=200)
+    commenter_body=models.TextField()
+    date_added=timezone.now()
+
+
+    def __str__(self):
+        return '%s - %s' %(self.post.title,self.commenter_name)
+
+    class Meta:
+        managed=False
+        db_table='comment'

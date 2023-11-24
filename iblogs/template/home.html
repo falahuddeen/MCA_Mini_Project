@@ -37,7 +37,9 @@
 
                 {% for p in posts %}
 
-                     <div class="row">
+
+
+                     <div class="row" style="border: #869791 dotted">
                      <div class="col s12 m8">
                             {{ p.content |truncatewords:60| safe}}
                             <div class="mt20">
@@ -45,12 +47,11 @@
                             </div>
                      </div>
                      
-                     <div class="col s12 m4">
-                         <img src="/media/{{ p.image }}"class="responsive-img" style="margin-top: 50px;">
+                     <div class="col s12 m3">
+                         <img src="/media/{{ p.image }}"class="responsive-img" style="margin-top: 50px;margin-left: 100px;width: 200px;height: 200px">
                      </div>
                      
                      </div>
-
                 {% endfor %}
 
 

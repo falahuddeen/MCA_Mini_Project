@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import home, post, category,about
+from .views import home, post, category,about,add_comment
 
 urlpatterns = [
     path('home/',home),
     path('',home),
     path('about/',about),
     path('blog/<slug:url>', post),
-    path('category/<slug:url>', category)
+    path('category/<slug:url>', category),
+    path('comment/<slug:url>',add_comment)
 ]
