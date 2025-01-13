@@ -1,12 +1,12 @@
 # BLOGMINGLE: Blog Management System
 
 ## Abstract
-<p style="text-align: justify">Blog management system project is a web-based application that automates the existing
+<p style="text-align: justify;">Blog management system project is a web-based application that automates the existing
 manual system with the help of computerized equipment and full-fledged computer software,
 fulfilling their requirements, so that their valuable information can be stored for a long
 period with easy access and manipulation of the same. The required software and hardware
 are easily available and easy to work with.</p>
-<p style="text-align: justify">The admin side manages post, category and comment. In category admin can manage the
+<p style="text-align: justify;">The admin side manages post, category and comment. In category admin can manage the
 category by adding new category when new trends come also update an existing category to
 attract the viewers, and admin can also delete an outdated category to maintain the readers.
 In post admin can manage posts by adding new posts daily to keep the readers and admin
