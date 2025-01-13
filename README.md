@@ -17,13 +17,8 @@ The user side is the readers, who can read the blogs without login. So, no login
 for the user module. Also, user can upload comments on each blog posts without login.</p>
 
 
+
 This project is about creating a blog managment system.
-
-## Certificate
-
-Here is the certificate for my project:
-
-![Certificate Image](https://github.com/yourusername/your-repository/blob/main/certificate-image.png?raw=true)
 
 You can also view the project code and other details in the repository.
 
